@@ -5,15 +5,16 @@
                 <!-- <NuxtLink to="/" class="grow-1 mx-auto">
                     <h2>Rasmus Ilmjärv</h2>                
                 </NuxtLink> -->
-                <button v-if="small" class="ml-auto py-3" @click="toggleMenu">X</button>
+                <button class="ml-auto py-3 md:hidden block" @click="toggleMenu">X</button>
             </div>
-            <Navbar v-if="!small || open"/>
+            <Navbar v-if="!small || open" :loaded="loaded" @navigated="toggleMenu"/>
         </header>
     </div>
 </template>
 <script setup lang="ts">
 const open = ref(false)
-let windowWidth = ref(1000)
+const loaded = ref(false)
+const windowWidth = ref(1000)
 
 function toggleMenu() {
     open.value = !open.value
@@ -28,6 +29,10 @@ function onWidthChange() {
     if (!small.value) open.value = false
 }
 
-onMounted(() => window.addEventListener('resize', onWidthChange))
+onMounted(() => {
+    onWidthChange()
+    window.addEventListener('resize', onWidthChange)
+    loaded.value = true
+})
 onUnmounted(() => window.removeEventListener('resize', onWidthChange))
 </script>

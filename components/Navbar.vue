@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex flex-col md:flex-row md:gap-2 bg-primary text-white px-5 py-3">
+    <nav class="flex flex-col md:flex-row md:gap-2 bg-primary text-white px-5 py-3" :class="loaded ? '' : 'hidden md:block'" @click="$emit('navigated')">
         <NuxtLink to="/">
             Home
         </NuxtLink>
@@ -15,4 +15,8 @@
     </nav>
 </template>
 <script setup lang="ts">
+defineProps({
+    loaded: Boolean
+})
+defineEmits(['navigated'])
 </script>
