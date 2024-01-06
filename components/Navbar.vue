@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex flex-col md:flex-row md:gap-2 bg-primary text-white px-5 py-3" :class="loaded ? '' : 'hidden md:block'" @click="$emit('navigated')">
+    <nav class="flex flex-col gap-4 md:flex-row md:gap-2 md:px-4 bg-primary text-white md:pb-2" @click="$emit('navigated')">
         <NuxtLink to="/">
             Home
         </NuxtLink>

@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css', '~/assets/css/custom.css'],
   app: {
-    baseURL: '/nuxt-generated/'
+    // baseURL: '/nuxt-generated/'
   },
   postcss: {
     plugins: {

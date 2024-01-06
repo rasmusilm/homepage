@@ -1,38 +1,39 @@
 <template>
-    <div>
-        <header class="text-center bg-primary text-white md:text-black md:bg-transparent">
-            <div class="flex px-2">
-                <!-- <NuxtLink to="/" class="grow-1 mx-auto">
-                    <h2>Rasmus Ilmjärv</h2>                
-                </NuxtLink> -->
-                <button class="ml-auto py-3 md:hidden block" @click="toggleMenu">X</button>
+    <div class="top-0 md:relative bg-primary text-white transition-[max-height] delay-100 duration-200 ease-in-out max-h-[10%]" :class="menuOpen ? 'fixed w-full !max-h-full h-full': 'sticky'">
+        <header class="text-center">
+            <div class="flex px-2 transition-[margin] duration-1000 ease" :class="menuOpen ? 'mt-5 mx-2' : ''">
+                <NuxtLink to="/" class="py-3 pl-[35px] grow-1 mx-auto">
+                    <h2 class="text-lg font-semibold">Rasmus Ilmjärv</h2>
+                </NuxtLink>
+                <div class="pt-2 md:hidden">
+                    <HamburgerButton v-model="menuOpen" />
+                </div>
             </div>
-            <Navbar v-if="!small || open" :loaded="loaded" @navigated="toggleMenu"/>
+            <div v-if="menuOpen" class="md:hidden mt-8 text-lg">
+                <Navbar @navigated="menuOpen = false" />
+            </div>
         </header>
+        <div class="md:block hidden mx-auto max-w-[1250px]">
+            <Navbar @navigated="menuOpen = false" />
+        </div>
     </div>
 </template>
+
 <script setup lang="ts">
-const open = ref(false)
-const loaded = ref(false)
-const windowWidth = ref(1000)
+import HamburgerButton from './subcomponents/HamburgerButton.vue'
 
-function toggleMenu() {
-    open.value = !open.value
-}
+const menuOpen = ref(false)
 
-const small = computed(() => {
-        return windowWidth.value < 768
-    })
-
-function onWidthChange() {
-    windowWidth.value = window.innerWidth
-    if (!small.value) open.value = false
-}
-
-onMounted(() => {
-    onWidthChange()
-    window.addEventListener('resize', onWidthChange)
-    loaded.value = true
+watch(menuOpen, (value, old) => {
+    const body = document.getElementsByTagName('body')[0]
+    body.className = value ? 'overflow-y-hidden md:overflow-auto' : ''
 })
-onUnmounted(() => window.removeEventListener('resize', onWidthChange))
 </script>
+
+<style scoped>
+.stick {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+</style>
