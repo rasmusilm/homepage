@@ -29,14 +29,16 @@
 <script setup lang="ts">
 import type { SkillGroup } from '~/types/skillgroup'
 
+// TODO fix image addresses
+
 const skills = ref<Array<SkillGroup>>(
     [
         {
             title: 'Backend Java Development',
             skillIcons:
                 [
-                    { name: 'Java', imgUrl: '/images/java.png' },
-                    { name: 'Spring', imgUrl: '/images/springio-icon.svg' }
+                    { name: 'Java', imgUrl: '/homepage/images/java.png' },
+                    { name: 'Spring', imgUrl: '/homepage/images/springio-icon.svg' }
                 ],
             paragraphs: [
                 'I have experience in building and maintaining Java Spring applications with high availability requirements. I have worked on both microservices / microapplications and medium complexity monolithic systems, building, developing and maintaining.',
@@ -46,8 +48,8 @@ const skills = ref<Array<SkillGroup>>(
         {
             title: 'Frontend Development with VueJs',
             skillIcons: [
-                { name: 'VueJS', imgUrl: '/images/vuejs-icon.svg' },
-                { name: 'NuxtJS', imgUrl: '/images/nuxtjs-icon.svg' }
+                { name: 'VueJS', imgUrl: '/homepage/images/vuejs-icon.svg' },
+                { name: 'NuxtJS', imgUrl: '/homepage/images/nuxtjs-icon.svg' }
             ],
             paragraphs: [
                 'I have worked on multiple projects using VueJs or NuxtJs to build frontend web applications. Some of those are pages with 1000-s of daily users, with peak traffic estimated to be 10-s of thousands.',
@@ -58,10 +60,10 @@ const skills = ref<Array<SkillGroup>>(
         {
             title: 'Additional skills / proficiencies',
             skillIcons: [
-                { name: 'Docker', imgUrl: '/images/docker-tile.svg' },
-                { name: 'Kubernetes', imgUrl: '/images/kubernetes-icon.svg' },
-                { name: 'RabbitMQ', imgUrl: '/images/rabbitmq-icon.svg' },
-                { name: 'Amazon S3', imgUrl: '/images/Amazon-S3-Logo.svg'}
+                { name: 'Docker', imgUrl: '/homepage/images/docker-tile.svg' },
+                { name: 'Kubernetes', imgUrl: '/homepage/images/kubernetes-icon.svg' },
+                { name: 'RabbitMQ', imgUrl: '/homepage/images/rabbitmq-icon.svg' },
+                { name: 'Amazon S3', imgUrl: '/homepage/images/Amazon-S3-Logo.svg'}
             ],
             paragraphs: ['In addition to usual fullstack development skills, I also have experience with many adjacently used tools, like Docker and Kubernetes for deploying applications, RabbitMQ message broker for persistent, high avalability communication between microservices, and Amazon S3 based cloud storage solutions.']
         }
