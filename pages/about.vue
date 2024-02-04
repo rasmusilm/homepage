@@ -37,8 +37,8 @@ const skills = ref<Array<SkillGroup>>(
             title: 'Backend Java Development',
             skillIcons:
                 [
-                    { name: 'Java', imgUrl: '/homepage/images/java.png' },
-                    { name: 'Spring', imgUrl: '/homepage/images/springio-icon.svg' }
+                    { name: 'Java', imgUrl: '/images/java.png' },
+                    { name: 'Spring', imgUrl: '/images/springio-icon.svg' }
                 ],
             paragraphs: [
                 'I have experience in building and maintaining Java Spring applications with high availability requirements. I have worked on both microservices / microapplications and medium complexity monolithic systems, building, developing and maintaining.',
@@ -48,8 +48,8 @@ const skills = ref<Array<SkillGroup>>(
         {
             title: 'Frontend Development with VueJs',
             skillIcons: [
-                { name: 'VueJS', imgUrl: '/homepage/images/vuejs-icon.svg' },
-                { name: 'NuxtJS', imgUrl: '/homepage/images/nuxtjs-icon.svg' }
+                { name: 'VueJS', imgUrl: '/images/vuejs-icon.svg' },
+                { name: 'NuxtJS', imgUrl: '/images/nuxtjs-icon.svg' }
             ],
             paragraphs: [
                 'I have worked on multiple projects using VueJs or NuxtJs to build frontend web applications. Some of those are pages with 1000-s of daily users, with peak traffic estimated to be 10-s of thousands.',
