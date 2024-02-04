@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="text-center bg-primary text-white md:text-black md:bg-transparent">
+        <header class="text-center bg-primary text-white md:text-black md:bg-transparent z-50">
             <div class="flex px-2">
                 <!-- <NuxtLink to="/" class="grow-1 mx-auto">
                     <h2>Rasmus Ilmjärv</h2>                

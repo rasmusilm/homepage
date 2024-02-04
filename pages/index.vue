@@ -11,3 +11,9 @@
         <p>Quisque velit metus, porta id quam a, accumsan finibus metus. Proin a tristique est. Suspendisse risus enim, dignissim at lacus non, posuere pharetra ante. Morbi vehicula, tellus vitae aliquam venenatis, lacus purus ornare dolor, sit amet tempor augue elit ac sem. Proin pharetra nulla vitae tellus egestas vehicula. Cras tempus elit elit, vel dictum est pharetra ut. Vivamus finibus leo a diam consequat, ac aliquam augue condimentum. Vivamus placerat mi sed nisl dignissim, a cursus ex placerat. Phasellus maximus tortor nec nibh tincidunt, a tincidunt risus consequat. Quisque in accumsan erat. In dignissim, velit hendrerit pharetra interdum, ligula mi convallis nunc, ut rhoncus magna quam ut elit. Curabitur nisi turpis, consequat id ultricies ut, finibus nec justo.</p>
     </div>
 </template>
+
+<script setup>
+useHead({
+    title: 'Rasmus Ilmjärv'
+})
+</script>
