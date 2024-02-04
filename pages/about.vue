@@ -60,10 +60,10 @@ const skills = ref<Array<SkillGroup>>(
         {
             title: 'Additional skills / proficiencies',
             skillIcons: [
-                { name: 'Docker', imgUrl: '/homepage/images/docker-tile.svg' },
-                { name: 'Kubernetes', imgUrl: '/homepage/images/kubernetes-icon.svg' },
-                { name: 'RabbitMQ', imgUrl: '/homepage/images/rabbitmq-icon.svg' },
-                { name: 'Amazon S3', imgUrl: '/homepage/images/Amazon-S3-Logo.svg'}
+                { name: 'Docker', imgUrl: '/images/docker-tile.svg' },
+                { name: 'Kubernetes', imgUrl: '/images/kubernetes-icon.svg' },
+                { name: 'RabbitMQ', imgUrl: '/images/rabbitmq-icon.svg' },
+                { name: 'Amazon S3', imgUrl: '/images/Amazon-S3-Logo.svg'}
             ],
             paragraphs: ['In addition to usual fullstack development skills, I also have experience with many adjacently used tools, like Docker and Kubernetes for deploying applications, RabbitMQ message broker for persistent, high avalability communication between microservices, and Amazon S3 based cloud storage solutions.']
         }

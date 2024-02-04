@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-rows-4 h-28">
         <div class="row-span-3 overflow-hidden relative">
-            <img class="w-full h-full" :src="data.imgUrl">
+            <NuxtImg class="w-full h-full" :src="data.imgUrl"/>
         </div>
         <div class="text-center">
             <h5 class="font-bold text-lg">
