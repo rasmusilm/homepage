@@ -9,12 +9,14 @@ const data = ref([
     {
         title: 'This site',
         link: 'https://github.com/rasmusilm/rasmusilm.github.io',
-        description: 'A Nuxt3 app served with github pages using SSR (Server Side Rendering)'
+        description: 'A Nuxt3 web page served with github pages using SSR (Server Side Rendering)',
+        img: "/images/nuxt-site.png"
     },
     {
         title: 'Light picture downloader',
         link: 'https://github.com/rasmusilm/light_picture_downloader',
-        description: 'A simple, lightweight solution to download images from the web. It does not include file conversion.'
+        description: 'A simple, lightweight solution to download images from the web. It does not include file conversion.',
+        img: "/images/PyPI_logo.svg"
     },
     {
         title: 'Genshin Impact ingame satistics viewer',

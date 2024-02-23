@@ -3,8 +3,8 @@
         <NuxtLink to="/">
             Home
         </NuxtLink>
-        <NuxtLink to="/about">
-            About me
+        <NuxtLink to="/contact">
+            Contact me
         </NuxtLink>
         <NuxtLink to="/projects">
             My projects

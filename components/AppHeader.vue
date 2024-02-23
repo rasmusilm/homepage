@@ -1,20 +1,22 @@
 <template>
-    <div class="top-0 md:relative bg-primary text-white transition-[max-height] delay-100 duration-200 ease-in-out max-h-[10%] z-50" :class="menuOpen ? 'fixed w-full !max-h-full h-full': 'sticky'">
-        <header class="text-center">
-            <div class="flex px-2 transition-[margin] duration-1000 ease" :class="menuOpen ? 'mt-5 mx-2' : ''">
-                <NuxtLink to="/" class="py-3 pl-[35px] grow-1 mx-auto">
-                    <h2 class="text-lg font-semibold">Rasmus Ilmjärv</h2>
-                </NuxtLink>
-                <div class="pt-2 md:hidden">
-                    <HamburgerButton v-model="menuOpen" />
+    <div class="bg-primary" :class="menuOpen ? 'pt-8 md:pt-0' : ''">
+        <div class="top-0 md:relative bg-inherit text-white transition-[max-height] delay-100 duration-200 ease-in-out max-h-[10%] z-50" :class="menuOpen ? 'fixed w-full !max-h-full h-full': 'sticky'">
+            <header class="text-center">
+                <div class="flex px-2 transition-[margin] duration-1000 ease" :class="menuOpen ? 'mt-5 mx-2 md:m-0' : ''">
+                    <NuxtLink to="/" class="py-3 pl-[35px] grow-1 mx-auto">
+                        <h2 class="text-lg font-semibold">Rasmus Ilmjärv</h2>
+                    </NuxtLink>
+                    <div class="pt-2 md:hidden">
+                        <HamburgerButton v-model="menuOpen" />
+                    </div>
                 </div>
-            </div>
-            <div v-if="menuOpen" class="md:hidden mt-8 text-lg">
+                <div v-if="menuOpen" class="md:hidden mt-8 text-lg">
+                    <Navbar @navigated="menuOpen = false" />
+                </div>
+            </header>
+            <div class="md:block hidden mx-auto max-w-[1250px]">
                 <Navbar @navigated="menuOpen = false" />
             </div>
-        </header>
-        <div class="md:block hidden mx-auto max-w-[1250px]">
-            <Navbar @navigated="menuOpen = false" />
         </div>
     </div>
 </template>
